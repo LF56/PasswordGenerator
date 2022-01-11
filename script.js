@@ -23,6 +23,7 @@ function generatePassword(){
     var confirmLength =(prompt("How many characters would you like to be included in your password?"));
   }
  
+ 
 //Confirm password characters
 var confirmUppercase= confirm("Press OK to confirm your password will include uppercase characters");
 var confirmLowercase= confirm("Press OK to confirm your password will include lowercase characters");
