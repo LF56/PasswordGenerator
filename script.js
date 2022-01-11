@@ -40,16 +40,16 @@ var confirmSpecialCharacter = confirm("Press OK to confirm your password will in
 var passwordCharacters= []
 
 if (confirmUppercase){
-  passwordCharacters= passwordCharacters.contact(alphaUpper)
+  passwordCharacters= passwordCharacters.concat(alphaUpper)
 }
 if (confirmLowercase){
-  passwordCharacters= passwordCharacters.contact(alphaLower)
+  passwordCharacters= passwordCharacters.concat(alphaLower)
 }
 if (confirmSpecialCharacter){
-  passwordCharacters= passwordCharacters.contact(specialCharacter)
+  passwordCharacters= passwordCharacters.concat(specialCharacter)
 }
 if (confirmNumericalCharacter){
-  passwordCharacters= passwordCharacters.contact(number)
+  passwordCharacters= passwordCharacters.concat(number)
 }
   console.log(passwordCharacters)
 
@@ -62,19 +62,10 @@ for (var i = 0; i < confirmLength; i++) {
 return randomPassword;
 
 }
-
-
-// Get references to the #generate element
-var generateBtn = document.querySelector("#generate");
-
-// Write password to the #password input
 function writePassword() {
   var password = generatePassword();
   var passwordText = document.querySelector("#password");
 
   passwordText.value = password;
-
 }
 
-// Add event listener to generate button
-generateBtn.addEventListener("click", writePassword);
